@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: #000;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__links {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__links a {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 40px;
+  transition: all .3s linear;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__links .active {
+  background-color: #fff;
+  color: #000;
+}
+
+.header .btn {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 40px;
+  transition: all .3s linear;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px;
+}
+
+.form input {
+  width: 100%;
+  padding: 7px 10px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.form h4 {
+  margin: 20px 0;
+}
+
+.form a {
+  color: black;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form button {
+  width: 200px;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.form button:hover {
+  background-color: #fff;
+  color: #000;
+  outline: 1px solid black;
+}
+
+.form button:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.profile {
+  margin: 20px;
+}
+
+.todosContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo {
+  width: auto;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  gap: 30px;
+  justify-content: space-between;
+  background-color: #e1e1e1;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo p {
+  word-break: break-all;
+}
+
+.delete-btn {
+  width: 120px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all .3s linear;
+}
+
+.delete-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.todo-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
